@@ -8,7 +8,7 @@
 
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
-apply plugin : 'war'
+//apply plugin : 'jar'
 apply plugin: 'eclipse'
 
 // In this section you declare where to find the dependencies of your project
@@ -19,7 +19,11 @@ repositories {
 }
 
 dependencies {
-        // Use JUnit test framework
+    compile 'org.springframework:spring-jdbc:4.3.8.RELEASE'
+    compile 'com.h2database:h2:1.4.195'
+    compile 'log4j:log4j:1.2.17'
+    compile 'org.springframework:spring-context:4.3.8.RELEASE'   
     testImplementation 'junit:junit:4.12'
+    
 }
 
